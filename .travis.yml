@@ -6,4 +6,4 @@ jobs:
     - stage: Run unit tests
       script: pytest
     - stage: Format with black
-      script: black --check
+      script: black ./ --check
