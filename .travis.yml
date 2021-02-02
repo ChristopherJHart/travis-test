@@ -1,0 +1,10 @@
+language: python
+
+python:
+  - "3.8"
+
+jobs:
+  include:
+    - stage: Run unit tests
+      python: 3.8
+      script: pytest
