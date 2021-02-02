@@ -7,5 +7,5 @@ jobs:
       script: pytest
     - stage: Format with black
       script: black ./ --check
-install:
+after_script:
   - pip install black
