@@ -1,13 +1,9 @@
 language: python
-
 python:
   - "3.8"
-
 jobs:
   include:
     - stage: Run unit tests
-      python: 3.8
       script: pytest
     - stage: Format with black
-      python: 3.8
       script: black --check
