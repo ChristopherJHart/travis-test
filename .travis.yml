@@ -5,7 +5,5 @@ jobs:
   include:
     - stage: Run unit tests
       script: pytest
-    - stage: Format with black
-      script: black ./ --check
-after_script:
-  - pip install black
+    - stage: Execute script
+      script: python script.py
