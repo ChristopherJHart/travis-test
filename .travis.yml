@@ -5,7 +5,5 @@ jobs:
   include:
     - stage: Run unit tests
       script: pytest
-    - stage: Build Docker image
-      script: docker build -t chrisjhart/travis-test .
     - stage: Push Docker image to DockerHub
-      script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push chrisjhart/travis-test
+      script: docker build -t chrisjhart/travis-test . && echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin && docker push chrisjhart/travis-test
