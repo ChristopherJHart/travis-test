@@ -10,3 +10,4 @@ for x in range(0, 10):
     print(f"{x} -> {x * x}")
 make_request()
 print("All done!")
+print("Bye!")
